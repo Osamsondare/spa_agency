@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+  
+  body {
+    @apply font-sans text-plum-dark bg-taupe-light/10;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif font-medium text-plum-dark leading-tight;
+  }
+  
+  h1 {
+    @apply text-4xl md:text-5xl lg:text-6xl;
+  }
+  
+  h2 {
+    @apply text-3xl md:text-4xl;
+  }
+  
+  h3 {
+    @apply text-2xl md:text-3xl;
+  }
+  
+  p {
+    @apply leading-relaxed;
+  }
+}
+
+@layer components {
+  .container-custom {
+    @apply container mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  
+  .btn {
+    @apply px-6 py-3 rounded-md font-medium transition-all duration-300 inline-block;
+  }
+  
+  .btn-primary {
+    @apply btn bg-gold text-plum-dark hover:bg-gold-dark;
+  }
+  
+  .btn-secondary {
+    @apply btn bg-plum text-white hover:bg-plum-light;
+  }
+  
+  .input-field {
+    @apply w-full px-4 py-3 rounded-md border border-taupe focus:outline-none focus:ring-2 focus:ring-gold transition duration-200;
+  }
+  
+  .section {
+    @apply py-12 md:py-16 lg:py-20;
+  }
+  
+  .nav-link {
+    @apply relative px-3 py-2 text-plum hover:text-gold transition-colors duration-300 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-gold after:transition-all after:duration-300 hover:after:w-full;
+  }
+  
+  .nav-link.active {
+    @apply text-gold after:w-full;
+  }
+  
+  .service-card {
+    @apply p-6 rounded-lg bg-white shadow-md transition-all duration-300 hover:shadow-lg;
+  }
+  
+  .social-icon {
+    @apply w-10 h-10 flex items-center justify-center rounded-full bg-taupe text-plum hover:bg-gold hover:text-plum-dark transition-all duration-300;
+  }
+}
